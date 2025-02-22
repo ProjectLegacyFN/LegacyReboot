@@ -117,7 +117,7 @@ APawn* AGameModeBase::SpawnDefaultPawnForHook(AGameModeBase* GameMode, AControll
 	if (!PlayerStateAthena)
 		return nullptr; // return original?
 
-	static auto PawnClass = FindObject<UClass>(L"/Game/Athena/PlayerPawn_Athena.PlayerPawn_Athena_C");
+	static auto PawnClass = FindObject<UClass>(L"/Game/Athena/PlayerPawn_TimeTravel.PlayerPawn_TimeTravel_C");
 	static auto DefaultPawnClassOffset = GameMode->GetOffset("DefaultPawnClass");
 	GameMode->Get<UClass*>(DefaultPawnClassOffset) = PawnClass;
 
