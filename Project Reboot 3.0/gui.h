@@ -46,6 +46,7 @@
 #include "die.h"
 #include "calendar.h"
 #include "KismetRenderingLibrary.h"
+#include "bots.h"
 
 #define GAME_TAB 1
 #define PLAYERS_TAB 2
@@ -93,6 +94,7 @@ extern inline int WarmupRequiredPlayerCount = 1;
 extern inline bool bEnableRebooting = false;
 extern inline bool bEngineDebugLogs = false;
 extern inline bool bStartedBus = false;
+extern inline bool bSpawnedBots = false;
 extern inline bool bShouldDestroyAllPlayerBuilds = false;
 extern inline int AmountOfHealthSiphon = 0;
 
@@ -813,6 +815,15 @@ static inline void MainUI()
 					LOG_INFO(LogDev, "VFT: 0x{:x}", VFT - __int64(GetModuleHandleW(0)));
 				}
 				*/
+
+				if (!bSpawnedBots)
+				{
+					if (ImGui::Button("Spawn Bots"))
+					{
+						//Bots::SpawnBotsAtPlayerStarts(1);
+						//bSpawnedBots = true;
+					}
+				}
 
 				if (!bStartedBus)
 				{

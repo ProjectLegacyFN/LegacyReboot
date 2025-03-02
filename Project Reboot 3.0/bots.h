@@ -347,8 +347,6 @@ namespace Bots
 
 	static void SpawnBotsAtPlayerStarts(int AmountOfBots)
 	{
-		return;
-
 		auto GameState = Cast<AFortGameStateAthena>(GetWorld()->GetGameState());
 		auto GameMode = Cast<AFortGameModeAthena>(GetWorld()->GetGameMode());
 
